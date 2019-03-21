@@ -1,0 +1,125 @@
+.name {
+    text-align: center;
+}
+
+#tovlist {
+    text-align: center;
+}
+
+#post {
+    color: #494949;
+    background: #ffffff;
+    padding: 10px;
+    border: 4px solid #494949;
+    border-radius: 15px;
+    width: 90px;
+}
+
+.item_form ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px 150px 0px 150px;
+    text-align: left;
+}
+
+.item_form li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+}
+
+.item_form label {
+    margin-top: 3px;
+    padding: 3px;
+    float: left;
+}
+
+.item_form input {
+    height: 30px;
+    padding: 5px 65px 5px 5px;
+    vertical-align: middle;
+}
+
+.myButton {
+    background-color: #ffffff;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: 1px solid #8bcfcf;
+    display: inline-block;
+    cursor: pointer;
+    color: #22e3e3;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #48589e;
+}
+
+.img {
+    width: 400px;
+}
+
+.name-product {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.description {
+    font-size: 14px;
+}
+
+#button-del {
+    color: #ff1a1a;
+    background: #ffffff;
+    padding: 10px;
+    border: 4px solid #ff3333;
+    border-radius: 15px;
+    width: 90px;
+}
+
+#button-cg, #change {
+    color: #d65cad;
+    background: #ffffff;
+    padding: 10px;
+    border: 4px solid #d147a3;
+    border-radius: 15px;
+    width: 90px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #f9e6ff;
+    margin: auto;
+    padding: 0;
+    border: 2px solid #f2ccff;
+    width: 45%;
+}
+
+.close {
+    color: #d65cad;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

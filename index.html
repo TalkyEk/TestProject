@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
+        <title>Shop</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+                <div class="col-lg-12">
+                    <h1 class="name">SALAM</h1>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-6">
+                    <form class="item_form" action="" method="post" name="contact_form">
+                        <ul>
+                            <li>
+                                <label>Picture Url</label><input type="url" placeholder="http://picture.com/" id="inputurl">
+                            </li>
+                            <li>
+                                <label>Product Name</label><input type="text" placeholder="Hat" id="inputname">
+                            </li>
+                            <li>
+                                <label>Description</label><input type="text" placeholder="Beautiful hat!" id="inputdesc">
+                            </li>
+                            <li class="btn-publish">
+                                <button id="post">Post Item!</button>
+                            </li>
+                        </ul>
+                    </form>
+                    <div id="tovlist">
+                        <h1>Products</h1>
+                    </div>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="modal-body">
+                                <form class="item_form" action="" method="post" name="contact_form">
+                                    <ul>
+                                        <li>
+                                            <label>New Picture Url</label><input type="url" placeholder="http://picture.com/"
+                                                                                 id="inputnewurl">
+                                        </li>
+                                        <li>
+                                            <label>New Product Name</label><input type="text" placeholder="Hat"
+                                                                                  id="inputnewname">
+                                        </li>
+                                        <li>
+                                            <label>New Description</label><input type="text" placeholder="Beautiful hat!"
+                                                                                 id="inputnewdesc">
+                                        </li>
+                                        <li class="btn-change">
+                                            <button id="change">Change It!</button>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+        </div>
+
+        <script src="data.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
