@@ -16,7 +16,7 @@ tik.addEventListener('click', function() {
   add.innerHTML += tovTemplate;
   if(localStorage.getItem('microbd') != undefined) {
     const dobavka = JSON.parse(localStorage.getItem('microbd'));
-    dobavka.push({ tovar: url, name: name, description: desc });
+    dobavka.push({ tovar: url, name: name, description: desc});
     return localStorage.setItem('microbd', JSON.stringify(dobavka));
   }
   tovdata.push({ tovar: url, name: name, description: desc });
@@ -58,6 +58,10 @@ window.onload = function() {
   btnChange.forEach(function (btn) {
     btn.onclick = function() {
       modal.style.display = 'block';
+      const currentmodal = btn.parentElement;
+      const indexmodal = currentmodal.querySelector("#button-del").dataset.index;
+      const currentedit = document.querySelector("#myModal");
+      currentedit.setAttribute("index", indexmodal);
     };
   });
   
@@ -72,13 +76,18 @@ window.onload = function() {
   };
   
   const changes = document.getElementById('change');
-  changes.onclick = function() {
-    console.log('change');
-    const newurl = document.getElementById('inputnewurl').value;
+  changes.onclick = function(e) {
+  	event.preventDefault();
+  	let data1 = e.currentTarget;
+  	const newurl = document.getElementById('inputnewurl').value;
     const newname = document.getElementById('inputnewname').value;
     const newdesc = document.getElementById('inputnewdesc').value;
-    console.log(newurl);
-    console.log(newname);
-    console.log(newdesc);
+    const curedit = data1.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("index");
+    console.log(curedit);
+    let xz = JSON.parse(localStorage.getItem('microbd'));
+    xz.splice(curedit, 1, { tovar: newurl, name: newname, description: newdesc});
+    localStorage.setItem('microbd', JSON.stringify(xz));
+    modal.style.display = 'none';
+    location.reload();
   }
 };
